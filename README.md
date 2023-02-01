@@ -1,3 +1,3 @@
-[logo]: https://github.com/pab-h/octopusserver/blob/main/assets/octopus.png
+# Octopusserver
 
-![Octopus][logo]
+![Octopus](https://github.com/pab-h/octopusserver/blob/main/assets/octopus.png)
