@@ -1,6 +1,16 @@
 # Octopusserver
 
-![Octopus](./assets/octopus.png)
+![Octopus](https://github.com/pab-h/octopusserver/blob/main/assets/octopus.png)
+
+## How to install
+### Pypi
+```bash 
+pip install octopusserver
+```
+### Poetry
+```bash 
+poetry add octopusserver
+```
 
 ## Getting Started
 ```python
