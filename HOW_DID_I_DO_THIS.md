@@ -37,3 +37,4 @@ def resolve_queue(self):
 
             response_thread.start()
 ```
+**Note**: Method called in thread on `self.resolve_queue_thread.start()`
