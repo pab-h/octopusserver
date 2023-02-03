@@ -1,6 +1,7 @@
 # How did I do this? 
 
 ## Manage client requests
+**Note**: This functions are methods of Server class
 ```python
 def listen(self, callback: Callback | None = None):
     self.socket.listen()
@@ -38,3 +39,52 @@ def resolve_queue(self):
             response_thread.start()
 ```
 **Note**: Method called in thread on `self.resolve_queue_thread.start()`
+
+## Handle Request
+```python
+def handle(self, client: socket.socket):
+    try:
+        request_raw = client.recv(self.BUFFER_SIZE).decode()
+
+        request = Request(request_raw) 
+
+        response = Response(client) 
+
+        for trigger in self.router.uses: 
+            trigger(request, response)
+
+        triggers = self.router.find(HttpMethod(request.method), request.path)
+        
+        if not triggers is None:
+            for trigger in triggers:
+                trigger(request, response) 
+
+        else: 
+            filename = f"{self.router.static_folder}{request.path}"
+
+            if path_exists(filename):
+                response.send_file(filename)
+
+            else:  
+
+                response.send_error(
+                    HttpStatus.NOT_FOUND, 
+                    str(HttpStatus.NOT_FOUND.value)
+                )
+
+    finally:
+        client.close()
+```
+
+## Find Routes
+**Note**: This functions are methods of Router class
+```python
+    def __init__(self) -> None:
+        self.routes: dict[str, list[Trigger]] = {} 
+        ...
+
+    def find(self, method: HttpMethod, path: str):
+        key = f"{method}:{path}"
+
+        return self.routes.get(key)
+```
