@@ -46,6 +46,10 @@ router.post("path/to/post/route/", [trigger_post_route])
 
 ```
 
+## For the future
+- [ ] Recive files
+- [ ] Handling post and get data
+
 ## How did I do this? 
 [Here](./HOW_DID_I_DO_THIS.md) 
 
