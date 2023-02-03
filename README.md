@@ -1,6 +1,6 @@
 # Octopusserver
 
-![Octopus](https://github.com/pab-h/octopusserver/blob/main/assets/octopus.png)
+![Octopus](./assets/octopus.png)
 
 ## How to install
 ### Pypi
@@ -45,3 +45,6 @@ router.get("path/to/get/route/", [trigger_get_route])
 router.post("path/to/post/route/", [trigger_post_route])
 
 ```
+
+## How did I do this? 
+[Here](./HOW_DID_I_DO_THIS.md) 
