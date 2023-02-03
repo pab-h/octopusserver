@@ -48,3 +48,12 @@ router.post("path/to/post/route/", [trigger_post_route])
 
 ## How did I do this? 
 [Here](./HOW_DID_I_DO_THIS.md) 
+
+## References
+* [ExpressJs](https://expressjs.com/)
+* [HTTP request methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+* [Common MIME types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)
+* [HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+* [HTTP Server: Everything you need to know to Build a simple HTTP server from scratch](https://medium.com/from-the-scratch/http-server-what-do-you-need-to-know-to-build-a-simple-http-server-from-scratch-d1ef8945e4fa)
+* [Writing an HTTP server from scratch](https://bhch.github.io/posts/2017/11/writing-an-http-server-from-scratch/)
+* [ExpressJs](https://expressjs.com/)
